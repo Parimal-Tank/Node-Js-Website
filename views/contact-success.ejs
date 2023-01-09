@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website</title>
+
+    <style>
+        body {
+            background-color: skyblue;
+            font-family: verdana;
+            color: #fff;
+            padding: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 48px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+
+        p {
+            font-size: 20px;
+            text-align: center;
+        }
+        form{
+            width: 350px; 
+            max-width: 100%; 
+            padding: 20px; 
+            margin: 20px auto;
+        }
+        input , lable { 
+            font-size: 18px;
+            /* padding: 4px; */
+            /* display: block;  */
+            margin: 10px 0;
+            text-align: center;
+            width: 100%;
+            line-height: 22px;
+            outline: none;
+        }
+        input[type='submit']{font-size: 18px; padding: 4px; width: 75%; }
+    </style>
+</head>
+
+<body>
+    <%- include('partials/nav.ejs') -%>
+        <h1>Contact Us!</h1>
+        <p>Thanks for getting in touch!</p>
+        <p>You contacted <%= data.who %> in the <%= data.department %> department.</p>
+        <p>We will reply to you at <%= data.email %></p>
+</body>
+
+</html>
